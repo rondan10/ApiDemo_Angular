@@ -1,0 +1,21 @@
+<mat-card class="custom-card" *ngFor="let item of data">
+  <mat-card-header>
+    <div mat-card-avatar class="custom-avatar">
+      <img [src]="item.image">
+    </div>
+    <mat-card-title>{{item.name}}</mat-card-title>
+    <mat-card-subtitle>{{item.status}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="custom-image" [src]="item.image">
+  <mat-card-content>
+    <p>
+      Origen: {{item.origin.name}}
+      <br>
+      Creado: {{item.created | date:'medium'}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">{{item.gender}}</button>
+    <button mat-raised-button color="accent">{{item.species}}</button>
+  </mat-card-actions>
+</mat-card>
